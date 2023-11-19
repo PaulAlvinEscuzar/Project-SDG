@@ -3,12 +3,12 @@ include('../../includes/header.php');
 include("../../includes/db.php");
 ?>
 <?php if (isset($_GET['message'])) { ?>
-    <div class="message-container bg-success bg-gradient p-4">
+<div class="message-container bg-success bg-gradient p-4">
     <a class="text-dark float-end text-uppercase text-decoration-none fs-3" href="#" id="closeBtn">&times;</a>
-        <p class="text-center text-light p-2">
-            <?php echo $_GET['message']; ?>
-        </p>
-    </div>
+    <p class="text-center text-light p-2">
+        <?php echo $_GET['message']; ?>
+    </p>
+</div>
 <?php } ?>
 <div class="container">
     <div class="row-mt-5">
@@ -36,7 +36,7 @@ include("../../includes/db.php");
 
                     if (mysqli_num_rows($select) > 0) {
                         while ($row = mysqli_fetch_assoc($select)) {
-                            $id = $row['ID'];
+                            $id_res311 = $row['ID'];
                             $title = $row['title'];
                             $author = $row['author'];
                             $yearPub = $row['yearPub'];
@@ -45,7 +45,9 @@ include("../../includes/db.php");
                     ?>
                     <tr>
                         <td class="text-center">
-                            <a href="../../admin/sdg3/delete/delete311.php?delete=<?php echo $id ?>" class="btn btn-danger" onclick="return confirm('Are you sure to delete this?')">Delete</a>
+                            <a href="../../admin/sdg3/delete/delete311.php?delete=<?php echo $id ?>"
+                                class="btn btn-danger"
+                                onclick="return confirm('Are you sure to delete this?')">Delete</a>
                         </td>
                         <td class="text-center">
                             <a href="../../admin/sdg3/update/update311.php?update=<?php echo $id ?>"
@@ -86,7 +88,7 @@ include("../../includes/db.php");
 
                     if (mysqli_num_rows($select) > 0) {
                         while ($row = mysqli_fetch_assoc($select)) {
-                            $id = $row['ID'];
+                            $id_res321 = $row['ID'];
                             $name_health_institute = $row['name_health_institute'];
                             $categ = $row['categ'];
                             $no_year_collab = $row['no_year_collab'];
@@ -139,15 +141,15 @@ btn_res321.addEventListener('click', () => {
 
 //for exit in message
 document.addEventListener("DOMContentLoaded", function() {
-        var closeBtn = document.getElementById("closeBtn");
+    var closeBtn = document.getElementById("closeBtn");
 
-        if (closeBtn) {
-            closeBtn.addEventListener("click", function(event) {
-                event.preventDefault();
-                var messageContainer = document.querySelector(".message-container");
-                messageContainer.style.display = "none";
-                window.location.href = "up_delsdg3.php";
-            });
-        }
-    });
+    if (closeBtn) {
+        closeBtn.addEventListener("click", function(event) {
+            event.preventDefault();
+            var messageContainer = document.querySelector(".message-container");
+            messageContainer.style.display = "none";
+            window.location.href = "up_delsdg3.php";
+        });
+    }
+});
 </script>

@@ -12,9 +12,9 @@ if (isset($_GET['update'])) {
         $no_citation = $_POST['no_citations'];
 
         $update_query = "UPDATE `research3.1.1` SET title = '$title', author = '$author', yearPub = '$yearPub', no_clinical = '$no_clinical', no_citation = '$no_citation' WHERE ID = '$id'";
-        $update = mysqli_query($conn,$update_query);
+        $update = mysqli_query($conn, $update_query);
 
-        if($update){
+        if ($update) {
             header("Location:../../../admin/sdg3/up_delsdg3.php?message=Update Successful");
         }
     }
@@ -29,7 +29,7 @@ if (isset($_GET['update'])) {
             $no_clinical = $row['no_clinical'];
             $no_citations = $row['no_citation'];
 ?>
-<div class="collapse w-100 h-auto" id="research311" style="display: block ;">
+<div class="collapse w-100 h-auto p-3" id="research311" style="display: block ;">
     <h2 class="text-center pb-5">Research on health and wellbeing</h2>
     <form action="" method="post">
         <div class="input-group mb-3">
@@ -39,7 +39,7 @@ if (isset($_GET['update'])) {
         </div>
         <div class="input-group mb-3">
             <span class="input-group-text" id="basic-addon1">Author</span>
-            <input type="text" class="form-control" value="<?php echo "$author"?>" name="author"
+            <input type="text" class="form-control" value="<?php echo "$author" ?>" name="author"
                 aria-describedby="basic-addon1">
         </div>
         <div class="input-group mb-3">
