@@ -2,6 +2,8 @@
 include '../includes/db.php'; ?>
 <div class="container">
     <div class="row-mt-5">
+
+
         <div class="container-xl" style="height:400px; background-color:#4ca146;">
             <div class="row justify-content-center">
                 <div class="co-md-5 text-center text-md-start text-light ps-5">
@@ -42,6 +44,7 @@ include '../includes/db.php'; ?>
                                     <p></p>
                                 </div>
                             </div>
+
                             <div class="dropdown">
                                 <button class="btn btn-light dropdown-toggle float-end w-100" type="button"
                                     id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
@@ -61,13 +64,13 @@ include '../includes/db.php'; ?>
                                             $yearpub = $row['yearPub'];
                                             $no_clinical = $row['no_clinical'];
                                             $no_citations = $row['no_citation'];
-                                    ?>k
+                                    ?>
                                     <div class="container d-grid mt-3">
                                         <div class="border border-dark p-3">
                                         <div class="input-group mb-3">
                                             <span class="input-group-text" id="basic-addon1">Title</span>
                                             <input type="text" class="form-control" value="<?php echo "$title"?>"
-                                                aria-label="Username" aria-describedby="basic-addon1">
+                                               readonly aria-label="Username" aria-describedby="basic-addon1">
                                         </div>
                                         <div class="input-group mb-3">
                                             <span class="input-group-text" id="basic-addon1">Author</span>

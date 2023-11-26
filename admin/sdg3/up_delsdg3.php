@@ -45,12 +45,12 @@ include("../../includes/db.php");
                     ?>
                     <tr>
                         <td class="text-center">
-                            <a href="../../admin/sdg3/delete/delete311.php?delete=<?php echo $id ?>"
+                            <a href="../../admin/sdg3/delete/delete311.php?delete=<?php echo $id_res311 ?>"
                                 class="btn btn-danger"
                                 onclick="return confirm('Are you sure to delete this?')">Delete</a>
                         </td>
                         <td class="text-center">
-                            <a href="../../admin/sdg3/update/update311.php?update=<?php echo $id ?>"
+                            <a href="../../admin/sdg3/update/update311.php?update=<?php echo $id_res311 ?>"
                                 class="btn btn-success">Update</a>
                         </td>
                         <td class="text-center"><?php echo $title ?></td>
